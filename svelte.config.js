@@ -1,13 +1,12 @@
 // svelte.config.js
-import adapter from '@sveltejs/adapter-vercel'; // <-- ON CHANGE L'IMPORT
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter() // On s'assure qu'il est bien appelé ici
-	},
-	preprocess: vitePreprocess()
+		// L'adaptateur est la seule chose nécessaire dans la config kit pour le déploiement
+		adapter: adapter()
+	}
 };
 
 export default config;
